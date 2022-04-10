@@ -1,0 +1,24 @@
+### Starting build.
+# Target: visualization.ml.depends, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), extension:ml, file:visualization.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamldep -package graphics -package CS51Utils -modules visualization.ml > visualization.ml.depends # cached
+# Target: config.ml.depends, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), extension:ml, file:config.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamldep -package graphics -package CS51Utils -modules config.ml > config.ml.depends # cached
+# Target: config.cmo, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, compile, extension:cmo, extension:ml, file:config.cmo, file:config.ml, implem, ocaml, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o config.cmo config.ml # cached
+# Target: statistics.ml.depends, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), extension:ml, file:statistics.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamldep -package graphics -package CS51Utils -modules statistics.ml > statistics.ml.depends # cached
+# Target: counter.ml.depends, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), extension:ml, file:counter.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamldep -package graphics -package CS51Utils -modules counter.ml > counter.ml.depends # cached
+# Target: counter.cmo, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, compile, extension:cmo, extension:ml, file:counter.cmo, file:counter.ml, implem, ocaml, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o counter.cmo counter.ml # cached
+# Target: statistics.cmo, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, compile, extension:cmo, extension:ml, file:statistics.cmo, file:statistics.ml, implem, ocaml, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o statistics.cmo statistics.ml # cached
+# Target: utilities.ml.depends, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), extension:ml, file:utilities.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamldep -package graphics -package CS51Utils -modules utilities.ml > utilities.ml.depends # cached
+# Target: utilities.cmo, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, compile, extension:cmo, extension:ml, file:utilities.cmo, file:utilities.ml, implem, ocaml, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o utilities.cmo utilities.ml # cached
+# Target: visualization.cmo, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, compile, extension:cmo, extension:ml, file:visualization.cmo, file:visualization.ml, implem, ocaml, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o visualization.cmo visualization.ml # cached
+# Target: visualization.byte, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, dont_link_with, extension:byte, file:visualization.byte, link, ocaml, program, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamlc -linkpkg str.cma -thread -package graphics -package CS51Utils config.cmo counter.cmo statistics.cmo utilities.cmo visualization.cmo -o visualization.byte
+# Compilation successful.
